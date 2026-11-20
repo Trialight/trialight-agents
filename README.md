@@ -22,7 +22,6 @@ Connect from your assistant's directory, or follow https://trialight.com/docs. A
 | File | Read by |
 |---|---|
 | `plugin.json`, `mcp.json`, `assets/logo.png` | ChatGPT's plugin directory and Cursor's marketplace (the open Agent Plugin format) |
-| `gemini-extension.json` | Gemini CLI's extension gallery |
 | `server.json` | The official MCP Registry, as `com.trialight/trialight` |
 
 ## Licence
