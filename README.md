@@ -25,6 +25,10 @@ Connect from your assistant's directory, or follow https://trialight.com/docs. A
 | `gemini-extension.json` | Gemini CLI's extension gallery |
 | `server.json` | The official MCP Registry, as `com.trialight/trialight` |
 
+## Licence
+
+The files here are under the [MIT licence](LICENSE). The Trialight name and logo (`assets/`) are not: they remain the property of Trialight Ltd, all rights reserved, and nothing here grants permission to use them.
+
 ## Contact
 
 Help: support@trialight.com. Security: see [SECURITY.md](SECURITY.md).
