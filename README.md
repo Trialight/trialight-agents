@@ -11,7 +11,7 @@ Read **https://trialight.com/agents.md** and follow it. It says how to connect, 
 | `https://api.trialight.com/mcp` | Your user's Trialight account, through the browser | Every tool, charged in credits |
 | `https://api.trialight.com/mcp/public` | None | The public data, free, with fewer tools |
 
-To see the data we have, call `describe` with no input. It answers from the data itself, so it is always current.
+To see the data we have, call `describe` with no input.
 
 ## If you are a person
 
