@@ -1,0 +1,10 @@
+{
+  "name": "trialight",
+  "version": "1.0.0",
+  "description": "Structured industry data with sources",
+  "mcpServers": {
+    "trialight": {
+      "httpUrl": "https://api.trialight.com/mcp"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "trialight",
+  "version": "1.0.3",
+  "description": "Structured data with a source on every value: find, count, compare and cite records.",
+  "author": {
+    "name": "Trialight",
+    "email": "support@trialight.com",
+    "url": "https://trialight.com"
+  },
+  "homepage": "https://trialight.com/for-ai",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Trialight",
+        "shortDescription": "Structured industry data",
+        "longDescription": "Trialight gives your agent structured industry data, starting with life sciences. Your agent can find exactly the data it needs and analyse it in seconds, with every value linked to the registry, regulator or filing it came from. For questions that need the latest news, it researches the answer and shows the source for every claim.\n\nBuilt for analysts, investors and business development teams who need answers they can check. You sign in with a Trialight account, and you can save what your agent finds as a table in Trialight.",
+        "developerName": "Campbell Wolford",
+        "category": "Data & Analytics",
+        "capabilities": [
+          "Find the data you need",
+          "Analyse and compare data",
+          "See the source behind every value",
+          "Save what your agent finds",
+          "Research the latest news, with sources"
+        ],
+        "websiteURL": "https://trialight.com",
+        "supportURL": "https://trialight.com/contact",
+        "privacyPolicyURL": "https://trialight.com/privacy",
+        "termsOfServiceURL": "https://trialight.com/terms",
+        "defaultPrompt": [
+          "Which companies sponsor the most obesity trials? Top five, with sources.",
+          "Which drugs have reached Phase 3 or later for obesity?",
+          "How many trials is AstraZeneca a collaborator on, rather than the lead sponsor?"
+        ],
+        "logo": "./assets/logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Rank sponsors by trial count",
+              "prompt": "Which companies sponsor the most obesity trials? Give the top five with trial counts and sources.",
+              "tools_triggered": "search, query",
+              "expected_behavior": "Finds the condition, counts its trials grouped by lead sponsor, and lists the top five companies with counts and a source link for each."
+            },
+            {
+              "description": "Count matching records",
+              "prompt": "How many recruiting Phase 3 lung cancer trials are there?",
+              "tools_triggered": "search, query",
+              "expected_behavior": "Finds the condition and returns one count of recruiting Phase 3 trials, citing Trialight."
+            },
+            {
+              "description": "Read one record with sources",
+              "prompt": "Show me NCT05929066.",
+              "tools_triggered": "search, fetch",
+              "expected_behavior": "Finds the trial by its registry number and shows its record, with a source on each value."
+            },
+            {
+              "description": "Filter by a link's attribute",
+              "prompt": "Which drugs have reached Phase 3 or later for obesity?",
+              "tools_triggered": "search, query",
+              "expected_behavior": "Finds the condition and lists the drugs whose highest phase for it is Phase 3 or later, with a source for each."
+            },
+            {
+              "description": "Research a question",
+              "prompt": "What has the FDA approved for tirzepatide, and what is it being trialled for?",
+              "tools_triggered": "research",
+              "expected_behavior": "Returns a written answer covering its approvals and the conditions it is being trialled for, with a source on each claim."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Personal medical advice. Trialight provides data on trials and drugs, not advice, so ChatGPT should answer without calling it and suggest speaking to a doctor.",
+              "prompt": "Should I take semaglutide to lose weight?"
+            },
+            {
+              "description": "Investment advice. Trialight provides data, not advice, so ChatGPT should answer without calling it and not recommend buying or selling.",
+              "prompt": "Should I buy Novo Nordisk shares?"
+            },
+            {
+              "description": "General knowledge. Explaining how a class of drugs works needs no records or sources looked up, so Trialight should not be called.",
+              "prompt": "Explain how GLP-1 drugs work, in simple terms."
+            }
+          ]
+        },
+        "commerce": false
+      },
+      "publication": {
+        "release_notes": "First release: describe, search, query, fetch, save, account, set_usage_cap and research."
+      }
+    }
+  }
+}
