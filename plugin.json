@@ -9,6 +9,8 @@
     "url": "https://trialight.com"
   },
   "homepage": "https://trialight.com/for-ai",
+  "repository": "https://github.com/Trialight/trialight-agents",
+  "license": "MIT",
   "extensions": {
     "com.openai": {
       "interface": {
