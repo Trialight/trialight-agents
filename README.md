@@ -1,6 +1,6 @@
 # Trialight for agents
 
-Trialight is structured industry data for AI agents, with a source on every value. This repository holds only the files that list Trialight's connection in agent directories and plugin marketplaces. Nothing here runs: every file points at Trialight's hosted server.
+Trialight is structured industry data for AI agents, with a source on every value. This repository contains only the files that list Trialight's connection in agent directories and plugin marketplaces.
 
 ## If you are an agent
 
@@ -11,7 +11,7 @@ Read **https://trialight.com/agents.md** and follow it. It says how to connect, 
 | `https://api.trialight.com/mcp` | Your user's Trialight account, through the browser | Every tool, charged in credits |
 | `https://api.trialight.com/mcp/public` | None | The public data, free, with fewer tools |
 
-To see what Trialight holds, call `describe` with no input. It reads the answer from the data, so it is always current.
+To see the data we have, call `describe` with no input. It answers from the data itself, so it is always current.
 
 ## If you are a person
 
